@@ -1,16 +1,12 @@
-const MongoClient = require("mongodb").MongoClient;
-const url = "mongodb://localhost:27017/";
+import * as mongoDB from "mongodb";
 
-MongoClient.connect(url, (err : any, db: any) => {
-  if (err) throw err;
+export async function connectToDatabase (){
 
-  //criando o database myveiculodb
-  const dbo = db.db("piadas");
+  const client: mongoDB.MongoClient = new mongoDB.MongoClient("mongodb://localhost:27017");
 
-  //criando uma coleção de documentos para o databse myveiculodb
-  dbo.createCollection("piada", (err : any, res: any) => {
-    if (err) throw err;
-    console.log("Collection created!");
-    db.close();
-  });
-});
+  await client.connect();
+
+  const db: mongoDB.Db = client.db("piadasdb");
+
+  return db
+}
