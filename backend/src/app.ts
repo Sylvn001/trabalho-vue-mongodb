@@ -1,19 +1,13 @@
 import express from 'express'
 import { router } from './routes';
-import cors from 'cors';
+const cors  = require('cors');
 import {createSeeds} from './database/categorySeed'
-
-const allowedOrigins = ['http://localhost:3000'];
-
-const options: cors.CorsOptions = {
-  origin: allowedOrigins
-};
 
 //createSeeds() //Descomitar para rodar e dps commitar dnv
 
 const app = express()
 
-app.use(cors(options));
+app.use(cors());
 app.use(express.json())
 app.use(router);
 
