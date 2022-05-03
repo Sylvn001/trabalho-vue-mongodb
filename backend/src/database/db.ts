@@ -6,7 +6,8 @@ export async function connectToDatabase (){
 
   await client.connect();
 
-  const db: mongoDB.Db = client.db("piadasdb");
+  const db: mongoDB.Db = await client.db("piadasdb");
 
   return db
 }
+
