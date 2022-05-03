@@ -23,10 +23,10 @@
               <label class="form-label">Categoria</label>
               <select v-model="category" class="form-control">
                 <option disabled selected>-- Selecione uma categoria --</option>
-                <option value="1">Família</option>
-                <option value="2">Amigos</option>
-                <option value="3">Viagem</option>
-                <option value="4">Outros</option>
+                <option 
+                  v-for="cat in categories" 
+                  v-bind:value="cat._id" 
+                  v-bind:key="cat._id">{{cat.nome}}</option>
               </select>
             </div>
 
@@ -81,10 +81,11 @@ export default {
       message: 'Piadas!',
       showModal: false,
       jokes: [],
+      categories: [],
       title: '',
       body: '',
       category: '',
-      URL: 'http://localhost:8080'
+      URL: 'http://177.131.34.111:3000'
     }
   },
   components: {
@@ -101,9 +102,17 @@ export default {
         console.log(e);
       }
     },
+    async getCategories(){
+      try{
+        let { data } = await axios.get(`${this.URL}/categories`);
+        this.categories = data;
+      }catch(e){
+        console.log(e);
+      }
+    },
     async searchJokes(){
       try{
-        let { data } = await axios.get(`${this.URL}/jokes/filter?filter=${this.search}`);
+        let { data } = await axios.get(`${this.URL}/jokes/${this.search}`);
         this.jokes = data;
       }catch(e){
         console.log(e);
@@ -111,14 +120,16 @@ export default {
     },
     async newJoke(){
       try{
-        let joke = JSON.stringify({
+        let joke = {
           titulo: this.title,
           texto: this.body,
           categoria: this.category
-        });
+        };
         let { data } = await axios.post(`${this.URL}/jokes/create`, joke);
         console.log(data);
-        this.jokes.push(JSON.parse(joke));
+        console.log(joke);
+
+        this.jokes.push(joke);
         this.title = '';
         this.body = '';
         this.category = '';
@@ -128,6 +139,7 @@ export default {
       }
     },
     openModal(){
+      this.getCategories();
       this.showModal = !this.showModal;
     }
   },
