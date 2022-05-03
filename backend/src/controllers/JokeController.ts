@@ -1,6 +1,9 @@
 import { Request, Response } from "express";
 import { connectToDatabase } from "../database/db";
 
+import CategoriesController from "./CategoriesController";
+const categoriesController = new CategoriesController();
+
 export default class JokeController {
   async findAll(request: Request, response: Response) {
     const dbCOn = await connectToDatabase();
