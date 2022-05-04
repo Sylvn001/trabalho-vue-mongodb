@@ -2,4 +2,4 @@
 
 how start 
 - npm run start
-- server will run in localhost:8080
+- server will run in localhost:3000
