@@ -44,7 +44,7 @@
       <div class="d-flex my-4 justify-content-between align-items-center">
         <div>
           <input 
-            class="rounded border bg-white outline-0 me-3 px-3 py-2"
+            class="search border-0 bg-white outline-0 me-3 px-3 py-2"
             v-model="search" 
             type="search">
           <button class="btn btn-dark" @click="searchJokes">Search</button>
@@ -58,8 +58,9 @@
         <div 
           v-for="(joke, index) in jokes" 
           v-bind:key="index"
-          class="bg-white rounded-3 mx-auto p-4 border">
-            <h4 class="text-center">{{joke.titulo}}</h4>
+          class="bg-white rounded-3 p-4 joke">
+            <h4>{{joke.titulo}}</h4>
+            <hr/>
             <p class="">{{joke.texto}}</p>
         </div>
       </div>
@@ -85,7 +86,7 @@ export default {
       title: '',
       body: '',
       category: '',
-      URL: 'http://177.131.34.111:3000'
+      URL: 'http://localhost:3000'
     }
   },
   components: {
@@ -147,7 +148,14 @@ export default {
 </script>
 
 <style>
-body{
+.joke, .search{
+  border-radius: 10px !important;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.03);
+  transition: 200ms;
+}
+.joke:hover{
+  box-shadow: 0px 28px 50px rgba(0,0,0,0.08);
+  transform: perspective(20px) translateZ(2px);
 
 }
 .backdrop{
@@ -165,13 +173,12 @@ body{
 }
 #app{
   min-height: 100vh;
-  background: linear-gradient(40deg, #00ffe729, #00ffb842, #006fff38); /*linear-gradient(238deg, #ff00553b, #006fff3d)*/;
+  background: linear-gradient(40deg, #00ffe729, #00ffb71c, #006eff11); /*linear-gradient(238deg, #ff00553b, #006fff3d)*/;
 }
 .grid{
   display: grid;
-  grid-template-columns: repeat(3,auto);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
-  justify-content: center;
   overflow-wrap: anywhere;
 }
 input{
