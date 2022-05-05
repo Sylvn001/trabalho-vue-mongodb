@@ -9,7 +9,16 @@ export default class JokeController {
     const dbCOn = await connectToDatabase();
     const filter = request.params.filter;
     const query = filter ? { titulo: filter } : {};
-    const data = await dbCOn.collection("piadas").find(query).toArray();
+    // const data = await dbCOn.collection("piadas").find(query).toArray();
+    const data = await dbCOn.collection("piadas").aggregate([{
+      $lookup:
+      {
+        from: 'categorias',
+        localField: 'categoriaId',
+        foreignField: "_id",
+        as: 'categoria'
+      }
+    }]).toArray();
     response.status(200).json(data);
   }
 

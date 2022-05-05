@@ -1,11 +1,11 @@
 import { connectToDatabase } from "./db";
 
 let categories = [
-    { nome: "Trocadilhos" },
-    { nome: "Tiozão" },
-    { nome: "Piadas de careca" },
-    { nome: "Gaucho" },
-    { nome: "Sogra" },
+    { _id:1, nome: "Trocadilhos" },
+    { _id:2, nome: "Tiozão" },
+    { _id:3, nome: "Piadas de careca" },
+    { _id:4, nome: "Gaucho" },
+    { _id:5, nome: "Sogra" }
 ]
 
 export async function createSeeds(){

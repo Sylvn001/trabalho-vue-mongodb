@@ -21,7 +21,7 @@
             <!-- Select list -->
             <div class="mb-3">
               <label class="form-label">Categoria</label>
-              <select v-model="category" class="form-control">
+              <select v-model="category" @change="getCategory(e)" class="form-control">
                 <option disabled selected>-- Selecione uma categoria --</option>
                 <option 
                   v-for="cat in categories" 
@@ -39,7 +39,7 @@
       </div>
     </div>
 
-    <div class="col-md-5 col-8 mx-auto">
+    <div class="col-md-8 col-8 mx-auto">
 
       <div class="d-flex my-4 justify-content-between align-items-center">
         <div>
@@ -78,7 +78,6 @@ export default {
   data() {
     return {
       search: '',
-      items: [],
       message: 'Piadas!',
       showModal: false,
       jokes: [],
@@ -124,7 +123,7 @@ export default {
         let joke = {
           titulo: this.title,
           texto: this.body,
-          categoria: this.category
+          categoriaId: this.category
         };
         let { data } = await axios.post(`${this.URL}/jokes/create`, joke);
         console.log(data);
@@ -138,6 +137,9 @@ export default {
       }catch(e){
         console.log(e);
       }
+    },
+    getCategory(e){
+      console.log(e);
     },
     openModal(){
       this.getCategories();
@@ -155,7 +157,7 @@ export default {
 }
 .joke:hover{
   box-shadow: 0px 28px 50px rgba(0,0,0,0.08);
-  transform: perspective(20px) translateZ(2px);
+  transform: perspective(30px) translateZ(2px);
 
 }
 .backdrop{
