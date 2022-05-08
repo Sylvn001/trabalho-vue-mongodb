@@ -12,6 +12,7 @@ router.get("/", (request: Request, response : Response) => {
 })
 
 router.get("/jokes/:filter?", jokeController.findAll)
+router.get("/jokes/category/:id", jokeController.filterByCategory)
 router.post("/jokes/create?", jokeController.create)
 
 router.get("/categories/:filter?", categoriesController.findAll)
