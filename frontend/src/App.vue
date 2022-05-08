@@ -97,7 +97,7 @@
             </div>
             <div class="mb-3">
               <label class="form-label">Categoria</label>
-              <select v-model="category" class="form-control">
+              <select v-model="category" @change="getCategory(e)" class="form-control">
                 <option disabled selected>-- Selecione uma categoria --</option>
                 <option 
                   v-for="cat in categories" 
@@ -192,7 +192,7 @@ export default {
         let joke = {
           titulo: this.title,
           texto: this.body,
-          categoria: this.category
+          categoriaId: this.category
         };
         let { data } = await axios.post(`${this.URL}/jokes/create`, joke);
         console.log(data);
@@ -205,6 +205,9 @@ export default {
       }catch(e){
         console.log(e);
       }
+    },
+    getCategory(e){
+      console.log(e);
     },
     openModal(){
       this.showModal = !this.showModal;
