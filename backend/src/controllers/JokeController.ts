@@ -5,6 +5,7 @@ import CategoriesController from "./CategoriesController";
 const categoriesController = new CategoriesController();
 
 export default class JokeController {
+  
   async findAll(request: Request, response: Response) {
     const dbCOn = await connectToDatabase();
     const filter = request.params.filter;
@@ -13,27 +14,31 @@ export default class JokeController {
       { $match: query },
       { $lookup: {
           from: "categorias",
-          localField: "categoria",
+          localField: "categoriaId",
           foreignField: "_id",
           as: "categoria"
-      }}
-    ]).toArray();
+      }},
+    ])
+    .sort({ _id: -1 })
+    .toArray();
     response.status(200).json(data);
   }
 
   async filterByCategory(request: Request, response: Response) {
     const dbCOn = await connectToDatabase();
     const filter = parseInt(request.params.id);
-    const query = filter ? { categoria: filter } : {};
+    const query = filter ? { categoriaId: filter } : {};
     const data = await dbCOn.collection("piadas").aggregate([
       { $match: query },
       { $lookup: {
           from: "categorias",
-          localField: "categoria",
+          localField: "categoriaId",
           foreignField: "_id",
           as: "categoria"
       }}
-    ]).toArray();
+    ])
+    .sort( { _id: -1 } )
+    .toArray();
     return response.status(200).json(data);
   }
 

@@ -3,7 +3,7 @@ import { connectToDatabase } from "./db";
 let categories = [
     { '_id': 1, 'nome': "Trocadilhos 😁" },
     { '_id': 2, 'nome': "Tiozão 🧓" },
-    { '_id': 3, 'nome': "Piadas de careca 👨‍🦲" },
+    { '_id': 3, 'nome': "Careca 👨‍🦲" },
     { '_id': 4, 'nome': "Gaucho 💁‍♂‍" },
     { '_id': 5, 'nome': "Sogra 👵" },
 ]

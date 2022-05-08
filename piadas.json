@@ -1,0 +1,97 @@
+[{
+  "_id": {
+    "$oid": "6277be4efab67f850e264af2"
+  },
+  "titulo": "Pintinho",
+  "texto": "<p><em style=\"color: rgb(64, 64, 64);\">Era uma vez um pintinho que se chama Relam.</em></p><p><span style=\"color: rgb(64, 64, 64);\"><span class=\"ql-cursor\">﻿</span>Toda vez que chovia, Relam piava!</span></p>",
+  "categoriaId": 1,
+  "emoji": "🐥"
+},{
+  "_id": {
+    "$oid": "6277bf76fab67f850e264af3"
+  },
+  "titulo": "Amém",
+  "texto": "<p><span style=\"color: rgb(64, 64, 64);\">Qual é a fórmula da água benta?</span></p><p><br></p><p><strong style=\"color: rgb(64, 64, 64);\"><em>R.: H Deus O!</em></strong></p>",
+  "categoriaId": 1,
+  "emoji": "🙏"
+},{
+  "_id": {
+    "$oid": "6277bfa9fab67f850e264af4"
+  },
+  "titulo": "Trollei!",
+  "texto": "<p>Na manhã de seu aniversário, uma mulher disse ao marido:</p><p><br></p><p>- Sonhei que você me dava um colar de diamantes. O que acha que isso significa?</p><p>- Talvez você descubra hoje à noite, respondeu ele.</p><p><br></p><p>Naquela noite, o homem chegou em casa com um pequeno pacote e o entregou à mulher. Ela rasgou o papel de embrulho, ansiosa, e encontrou um livro:&nbsp;<em>O significado dos sonhos</em>.</p>",
+  "categoriaId": 2,
+  "emoji": "📗"
+},{
+  "_id": {
+    "$oid": "6277c693fab67f850e264af5"
+  },
+  "titulo": "App de carros",
+  "texto": "<p><span style=\"color: rgb(64, 64, 64);\">Qual é a cidade brasileira que não tem táxi?</span></p><p><span style=\"color: rgb(64, 64, 64);\">R.:&nbsp;</span><em style=\"color: rgb(64, 64, 64);\">Uber</em><span style=\"color: rgb(64, 64, 64);\">lândia.</span></p>",
+  "categoriaId": 1,
+  "emoji": "🚕"
+},{
+  "_id": {
+    "$oid": "6277c6c4fab67f850e264af6"
+  },
+  "titulo": "Longe de mim",
+  "texto": "<p>– Nossa, sogrinha, eu queria que a senhora fosse uma estrela!</p><p>– Que lindo! – responde a sogra toda animada. – Jura? Por quê?</p><p>Pra ficar a milhões de quilômetros daqui!</p>",
+  "categoriaId": 5,
+  "emoji": "⭐"
+},{
+  "_id": {
+    "$oid": "6277c71afab67f850e264af7"
+  },
+  "titulo": "Sorte",
+  "texto": "<p>– Eu vim dar queixa, minha sogra sumiu.</p><p>– Há quanto tempo ela sumiu? – pergunta o delegado.</p><p>– Duas semanas – respondeu o genro.</p><p>– E só agora que você denuncia!?</p><p>– É que eu custei a acreditar que tivesse tanta sorte!</p>",
+  "categoriaId": 5,
+  "emoji": "😂"
+},{
+  "_id": {
+    "$oid": "6277c777fab67f850e264af8"
+  },
+  "titulo": "Piolho",
+  "texto": "<p>Estavam dois piolhos passeando na careca de um vovô quando um diz para o outro:</p><p><br></p><p>“Ei parceiro! Vamos embora, que esse piso está escorregando”.</p>",
+  "categoriaId": 3,
+  "emoji": "🔮"
+},{
+  "_id": {
+    "$oid": "6277c7c8fab67f850e264af9"
+  },
+  "titulo": "Calcinha",
+  "texto": "<p>No intervalo de um jogo no Beira-Rio, um torcedor se vira para o amigo e diz:</p><p>- Tchê, quando chegar em casa, vou arrancar a calcinha da minha guria!</p><p>O outro...</p><p>- Mas Bá, por que essa violência toda?</p><p>E o cara:</p><p>- Está me apertando muito...</p>",
+  "categoriaId": 4,
+  "emoji": "👙"
+},{
+  "_id": {
+    "$oid": "6277c809fab67f850e264afa"
+  },
+  "titulo": "Requentado",
+  "texto": "<p><span style=\"color: rgb(64, 64, 64);\">Um rapaz vai à padaria e pergunta se o salgado era de hoje.</span></p><p><span style=\"color: rgb(64, 64, 64);\">- Não, é de ontem.</span></p><p><span style=\"color: rgb(64, 64, 64);\">- E como faço para comer o de hoje?</span></p><p><span style=\"color: rgb(64, 64, 64);\">- Volte amanhã!</span></p>",
+  "categoriaId": 2,
+  "emoji": "🥖"
+},{
+  "_id": {
+    "$oid": "6277c820fab67f850e264afb"
+  },
+  "titulo": "Alô, Batman?",
+  "texto": "<p><span style=\"color: rgb(64, 64, 64);\">Porque o Batman colocou o Bat-móvel no seguro?</span></p><p><span style=\"color: rgb(64, 64, 64);\">R.: Porque ele tem medo que Robin!</span></p>",
+  "categoriaId": 1,
+  "emoji": "🦇"
+},{
+  "_id": {
+    "$oid": "6277c84efab67f850e264afc"
+  },
+  "titulo": "Nada de bebês",
+  "texto": "<p><span style=\"color: rgb(64, 64, 64);\">Por que o rádio não pode ter filhos?</span></p><p><span style=\"color: rgb(64, 64, 64);\">R.: Porque ele é estéreo.</span></p>",
+  "categoriaId": 1,
+  "emoji": "📻"
+},{
+  "_id": {
+    "$oid": "6277c874fab67f850e264afd"
+  },
+  "titulo": "Higiênico",
+  "texto": "<p><span style=\"color: rgb(64, 64, 64);\">Por que o policial não usa sabão?</span></p><p><span style=\"color: rgb(64, 64, 64);\">R.: Porque ele prefere deter gente.</span></p>",
+  "categoriaId": 1,
+  "emoji": "👮🏽‍♂️"
+}]
